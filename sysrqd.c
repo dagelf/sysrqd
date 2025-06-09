@@ -301,7 +301,6 @@ main (void)
   param.sched_priority = 99;
   if (sched_setscheduler(0, SCHED_FIFO, & param) != 0) {
       syslog (LOG_PID | LOG_DAEMON, "Unable to set realtime priority");
-  exit(EXIT_FAILURE);
   }
   
   openlog ("sysrqd", LOG_PID, LOG_DAEMON);
