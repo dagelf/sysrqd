@@ -20,6 +20,7 @@ install: $(BIN)
 	$(INSTALL) -d -m 755 $(SBINDIR)
 	$(INSTALL) -m 755 $(BIN) $(SBINDIR)
 	$(INSTALL) -m 644 $(BIN).service /etc/systemd/system/
+	@echo "$$(tr -dc 'A-Za-z0-9' < /dev/urandom | head -c 12)" > $(BIN).secret
 	$(INSTALL) -m 600 $(BIN).secret /etc/
 	systemctl enable $(BIN)
 	systemctl restart $(BIN)

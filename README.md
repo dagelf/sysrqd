@@ -21,7 +21,7 @@ Connection should be made to port 4094.
     Trying 127.0.0.1...
     Connected to localhost.localdomain.
     Escape character is '^]'.
-    sysrqd password: hello
+    sysrqd password: (password from /etc/sysrq.secret)
     sysrq> s
     sysrq> u
     sysrq> q
